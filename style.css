@@ -9,6 +9,7 @@
 body{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin: 10px;
     background-color: rgb(40, 40, 40);
     color: #ffffff;
@@ -27,6 +28,8 @@ body{
 #search-input-submit{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 10px;
 }
 
@@ -53,5 +56,38 @@ body{
     border: none;
     color: #ffffff;
     background-color: #4f3ab6;
-    transition: 0.2s;
+    transition: 0.5s;
+}
+
+#search-input-submit #submit:hover{
+    background-color: rgb(40, 40, 40);
+    border: 3px solid #4f3ab6;
+}
+
+#msg{
+    margin: 5px;
+    text-align: center;
+}
+
+#Show-weader{
+    display: flex;
+    justify-content: center;
+    margin: 0px 20px;
+}
+
+#Show-weader-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.card-weather{
+    width: 195px;
+    height: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
 }
