@@ -15,10 +15,7 @@ form.addEventListener("submit", e => {
         .then(data => {
             const {main,name,sys,weather} = data;
             let icon = `http://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`;
-            console.log(icon);
-
             const li = document.createElement("li");
             li.classList.add("card-weather");
-            list.appendChild(li);
         })
 })

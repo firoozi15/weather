@@ -97,4 +97,43 @@ body{
     border-radius: 10px;
     padding: 15px;
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.countryName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    width: 55px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: #4f3ab6;
+    color: #ffffff;
+}
+
+.cityName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.cityTemp{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.cityTemp .temp{
+    font-size: 40px;
+}
+
+.card-weather img {
+    width: 80px;
+    filter: drop-shadow(0px 0px 8px #4c4c4c);
 }
