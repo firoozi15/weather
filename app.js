@@ -10,5 +10,15 @@ form.addEventListener("submit", e => {
     let inputval = input.value;
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputval}&appid=${apikey}&units=metric`;
-    console.log(url);
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const {main,name,sys,weather} = data;
+            let icon = `http://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`;
+            console.log(icon);
+
+            const li = document.createElement("li");
+            li.classList.add("card-weather");
+            list.appendChild(li);
+        })
 })
