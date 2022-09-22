@@ -8,7 +8,7 @@ form.addEventListener("submit", e => {
     e.preventDefault();
     let inputval = input.value;
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputval}&appid=${apikey}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputval}&appid=${apikey}&units=metric&lang=en`;
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -22,7 +22,7 @@ form.addEventListener("submit", e => {
                 <div class="countryName">${sys["country"]}</div>
                 <div class="cityName">${name}</div>
                 <div class="cityTemp">
-                    <div class="temp">${main["temp"]}</div>
+                    <div class="temp">${Math.round(main["temp"])}</div>
                     <sup>°C</sup>
                 </div>
                 <img src="${icon}" alt="weatherIcon">
